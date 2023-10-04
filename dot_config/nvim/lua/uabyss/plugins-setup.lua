@@ -26,30 +26,20 @@ if not status then
   return
 end
 
-
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins-setup.lua source <afile> | PackerCompile
-  augroup end
-]])
-
-local status, packer = pcall(require, "packer")
-if not status then
-    return
-end
-
 return packer.startup(function(use)
     use("wbthomason/packer.nvim")
 
     use("bluz71/vim-nightfly-guicolors")
 
-    use("christoomey/vim-tmux-nzigator")
+    use("christoomey/vim-tmux-navigator")
 
     use("szw/vim-maximizer")
 
     use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
     use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
+
+    use("nvim-tree/nvim-tree.lua")
+    
 
     if packer_bootstrap then
         require("packer").sync()
