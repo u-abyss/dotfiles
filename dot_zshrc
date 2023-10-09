@@ -34,6 +34,8 @@ autoload -Uz compinit
 compinit
 
 # alias
+alias cd='z' # zoxide
+alias vi='nvim'
 alias ll='ls -lGF'
 alias ls='ls -GF'
 alias c='clear'
@@ -65,6 +67,9 @@ test -r $HOME/.opam/opam-init/init.zsh && . $HOME/.opam/opam-init/init.zsh > /de
 
 # starship
 eval "$(starship init zsh)"
+
+# zoxide
+eval "$(zoxide init zsh)"
 
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
