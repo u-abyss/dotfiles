@@ -19,6 +19,20 @@ function select-history() {
 zle -N select-history       
 bindkey '^r' select-history
 
+setopt nolistbeep
+setopt correct
+
+
+#zstyle ':completion:*:*:git:*' script /usr/local/etc/bash_completion.d/git-completion.bash
+#zstyle ':completion:*' menu select
+#fpath=(/usr/local/share/zsh-completions $fpath)
+#autoload -U compinit && compinit
+#zmodload -i zsh/complist
+
+zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
+autoload -Uz compinit
+compinit
+
 # alias
 alias ll='ls -lGF'
 alias ls='ls -GF'
@@ -57,3 +71,4 @@ eval "$(starship init zsh)"
 
 # autosuggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /Users/yuya.okuse/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
