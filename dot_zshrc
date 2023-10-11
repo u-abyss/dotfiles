@@ -1,4 +1,4 @@
-export LSCOLORS=gxfxcxdxbxegedabagacad
+export LSCOORS=gxfxcxdxbxegedabagacad
 
 export HISTFILE=$HOME/.zsh_history
 export HISTSIZE=100000        # メモリ上の履歴リストに保存されるイベントの最大数
@@ -36,6 +36,7 @@ compinit
 # alias
 alias cd='z' # zoxide
 alias vi='nvim'
+alias rm='trash-put'
 alias ll='ls -lGF'
 alias ls='ls -GF'
 alias c='clear'
