@@ -46,6 +46,7 @@ alias ....='cd ../../..'
 alias g='git'
 alias gaa='git add -A'
 alias git dev='git checkout develop'
+alias x='xed .'
 
 export PATH=/opt/homebrew/bin:$PATH
 export VOLTA_HOME=$HOME/.volta
