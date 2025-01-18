@@ -12,3 +12,5 @@ font-feature = -dlig
 window-padding-x = 8
 window-padding-y = 8
 
+cursor-style = underline
+
