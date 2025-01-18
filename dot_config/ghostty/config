@@ -1,0 +1,14 @@
+theme = tokyonight
+cursor-color = FF88FF
+macos-titlebar-proxy-icon = hidden
+cursor-style-blink = true
+
+config-default-files = false
+
+font-size = 18
+font-feature = -calt
+font-feature = -dlig
+
+window-padding-x = 8
+window-padding-y = 8
+

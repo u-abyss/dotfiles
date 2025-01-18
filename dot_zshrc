@@ -1,0 +1,46 @@
+typeset -U path PATH
+path=(
+  /opt/homebrew/bin(N-/)
+  /opt/homebrew/sbin(N-/)
+  /usr/bin
+  /usr/sbin
+  /bin
+  /sbin
+  /usr/local/bin(N-/)
+  /usr/local/sbin(N-/)
+  /Library/Apple/usr/bin
+)
+
+export RBENV_ROOT="$HOME/.rbenv"
+export PATH="$RBENV_ROOT/bin:$PATH"
+
+export VOLTA_HOME=$HOME/.volta
+export PATH=$VOLTA_HOME/bin:$PATH
+
+# alias
+alias cd='z' # zoxide
+alias vi='nvim'
+alias rm='trash-put'
+alias ll='ls -lGF'
+alias ls='ls -GF'
+alias c='clear'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias g='git'
+alias gaa='git add -A'
+alias glog='git log --oneline'
+alias git fixup='git commit --amend'
+alias git dev='git checkout develop'
+alias git main='git checkout main'
+alias x='xed .'
+
+source <(fzf --zsh)
+
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+eval "$(rbenv init -)"
+eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"
+
